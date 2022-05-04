@@ -12,7 +12,8 @@ There are weights of two models:
 
 ---
 
-You should follow throught this steps to obtain prediction of pubescence of spikelet
+You should follow throught this steps to obtain prediction of pubescence of spikelet:
+![Images for train and test looked like:](https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/28n4_3_{V-21}_pubesc.jpg?raw=true)
 
 1) Use efficientnet_b2 for obtaining 3-channel mask (color-checker, arista, spikelet)
 > Note, that I don't have script for efficientnet_b2, only trained weight
