@@ -14,7 +14,6 @@ Images for train and test looked like:
 
 You should follow throught this steps to obtain prediction of pubescence of spikelet:
 1) Use efficientnet_b2 for obtaining 3-channel mask (color-checker, arista, spikelet)
-> Note, that I don't have script for efficientnet_b2, only trained weights
 This is an example of mask:
 
 <img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/28n4_3_{V-21}.png" width="480" height="720">
