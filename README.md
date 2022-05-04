@@ -5,15 +5,15 @@ If you have several spikelets on an image you may use, for instance OpenCV metho
 
 > **countours, hierarchy = cv2.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)**
 
-### Instruction
+### Instructions
 
 ---
-Images for train and test looked like:
+Images for training and test looked like:
 
 <img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/28n4_3_{V-21}_pubesc.jpg" width="480" height="720">
 
-You should follow throught this steps to obtain prediction of pubescence of spikelet:
-1) Use efficientnet_b2 for obtaining 3-channel mask (color-checker, arista, spikelet)
+You should follow throught these steps to obtain prediction of pubescence of spikelet:
+1) Use segmentation model for obtaining 3-channel mask (color-checker, arista, spikelet)
 This is an example of mask:
 
 <img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/28n4_3_{V-21}.png" width="480" height="720">
@@ -22,6 +22,7 @@ This is an example of mask:
 
 <img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/28n4_3_{V-21}.jpg" width="240" height="512">
 
-3) Apply efficientnet_b1 for prediction of pubescence
+3) Apply classification model for prediction of pubescence
 
 *N.B. The project was supported by Institute of Cytology and Genetics of SB RAS*
+*P.S. If you wish to get weights for models, you may write me on email*
