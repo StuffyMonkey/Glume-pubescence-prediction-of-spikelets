@@ -1,7 +1,7 @@
 ### Abstract
 This project was developt for solving problem of glume pubescence of spikelets. The acquired model predicts pubescence feature of spikelets.
 There is also segmentation model for segmenting spikelets of other objects. Each spikelets must be fed to CNN separately.
-If you have several spikelets on an image you may use, for instance OpenCV method
+If you have several spikelets on an image you may use, for instance, OpenCV method
 
 > **countours, hierarchy = cv2.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)**
 
