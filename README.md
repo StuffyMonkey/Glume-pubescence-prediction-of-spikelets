@@ -5,10 +5,7 @@ If you have several spikelets on an image you may use, for instance OpenCV metho
 
 > **countours, hierarchy = cv2.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)**
 
-### How to use this project
-There are weights of two models:
-  - efficientnet_b2 (for segmentation)
-  - efficientnet_b1 (for classification)
+### Instruction
 
 ---
 Images for train and test looked like:
