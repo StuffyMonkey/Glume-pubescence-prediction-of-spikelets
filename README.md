@@ -18,3 +18,5 @@ You should follow throught this steps to obtain prediction of pubescence of spik
 > Note, that I don't have script for efficientnet_b2, only trained weight
 2) Extract spikelets from image mutiplied by mask as bounding boxes
 3) Apply efficientnet_b1 for prediction of pubescence
+
+*N.B. The project was supported by Institute of Cytology and Genetics of SB RAS*
