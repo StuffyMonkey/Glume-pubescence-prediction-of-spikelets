@@ -11,12 +11,15 @@ There are weights of two models:
   - efficientnet_b1 (for classification)
 
 ---
+Images for train and test looked like:
+<img scr="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/28n4_3_{V-21}_pubesc.jpg" width="512" height="678">
 
 You should follow throught this steps to obtain prediction of pubescence of spikelet:
-![Images for train and test looked like:](https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/28n4_3_{V-21}_pubesc.jpg?raw=true)
-
 1) Use efficientnet_b2 for obtaining 3-channel mask (color-checker, arista, spikelet)
-> Note, that I don't have script for efficientnet_b2, only trained weight
+> Note, that I don't have script for efficientnet_b2, only trained weights
+This is an example of mask:
+![Images for train and test looked like:](https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/28n4_3_{V-21}.png?raw=true)
+
 2) Extract spikelets from image mutiplied by mask as bounding boxes
 3) Apply efficientnet_b1 for prediction of pubescence
 
