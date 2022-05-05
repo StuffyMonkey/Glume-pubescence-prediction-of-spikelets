@@ -1,0 +1,9 @@
+Instructions for using binary file of model (infer.bin)
+
+SEGMENTATION:
+1. check option 
+	./infer --help
+2. run example 
+	./infer -bone efficientnet-b2 -mn model_efficientnet-b2.bin --cuda --verbose -bs 32 -ip img.jpg -op .
+
+CLASSIFICATION:
