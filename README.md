@@ -24,5 +24,6 @@ This is an example of mask:
 
 3) Apply classification model for prediction of pubescence
 
+*Co-authored by @rostepifanov*
 *N.B. The project was supported by Institute of Cytology and Genetics of SB RAS*
 *P.S. If you wish to get weights for models, you may write me on email*
