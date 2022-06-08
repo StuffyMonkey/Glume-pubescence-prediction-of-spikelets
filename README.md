@@ -23,11 +23,9 @@ This is an example of mask:
 <img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/28n4_3_{V-21}.jpg" width="240" height="512">
 
 3) Apply classification model for prediction of pubescence (model.py)
+using following command: python -inp <full_path_to_iamge> -out <full_path_to_save_txt_file>
 
-Using following command: python -inp <full_path_to_iamge> -out <full_path_to_save_txt_file>
-
-Results will be saved into txt file in format <full_path_to_image> <probability_prediction>
-
+- Results will be saved into txt file in format <full_path_to_image> <probability_prediction>
 N.B. This requires the presence of binary file of segmentation model
 
 *Co-authored by @rostepifanov (pretrained segmentation model)*
