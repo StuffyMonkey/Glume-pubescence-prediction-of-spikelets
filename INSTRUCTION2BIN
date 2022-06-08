@@ -11,7 +11,7 @@ CLASSIFICATION:
 1. check option
 	./model --help
 2. run model
-	./model --inp <full_path_to_image>
+	./model -inp <full_path_to_image> -out <path_to_save_txt_file_with_predictions>
 N.B. Results will be saved into txt file in format <full_path_to_image> <prediction>
 
 Also some tips for executing segmentation model (check path into segmentation of images notebook)
