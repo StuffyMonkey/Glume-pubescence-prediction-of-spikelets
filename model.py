@@ -100,8 +100,9 @@ def predict(img):
 
 
 @click.command()
-@click.option('--inp', help='Full path to image. Can process only png and jpg files!')
-def __main__(inp):
+@click.option('--inp', '-inp', help='Full path to image. Can process only png and jpg files!')
+@click.option('--out', '-out', help='Path to output txt file with images and predictions')
+def __main__(inp, out):
     img = []
     try:
         img = cv2.imread(inp)
@@ -116,7 +117,7 @@ def __main__(inp):
     img_tp = preprocess(get_crop(img, mask))
     prediction = predict(img_tp)
     os.remove(f'{os.getcwd()}/{img_name}')
-    with open('labels.txt', 'a') as out:
+    with open(f'{out}labels.txt', 'a') as out:
         out.write(f'{inp} {prediction:.3f}\n')
 
 
