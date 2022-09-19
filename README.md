@@ -28,6 +28,13 @@ using following command: python -inp <full_path_to_iamge> -out <full_path_to_sav
 - Results will be saved into txt file in format <full_path_to_image> <probability_prediction> <br/>
 N.B. This requires the presence of binary file of segmentation model
 
+### Model properties
+**accuracy:** 0.85
+
+Here is an example of class activation map of the model
+
+<img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/heatmap.png" width="512" height="512">
+
 *Co-authored by @rostepifanov (pretrained segmentation model)*
 
 *N.B. The project was supported by Institute of Cytology and Genetics of SB RAS*
