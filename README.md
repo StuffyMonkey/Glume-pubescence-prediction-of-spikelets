@@ -9,7 +9,6 @@ If you have several spikelets on an image you may use, for instance, OpenCV meth
 
 ### Instructions
 
----
 Images for training and test looked like:
 
 <img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/28n4_3_{V-21}_pubesc.jpg" width="480" height="720">
