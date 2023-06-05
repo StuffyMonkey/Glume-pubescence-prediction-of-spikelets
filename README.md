@@ -63,6 +63,7 @@ Here is an example of class activation map of the model
   ```
   by default prediction will be saved in your current dirrectory int txt file **predictions.txt** (if -out parameter wasn't passed)
   
+---
 
 *Co-authored by @rostepifanov (pretrained segmentation model)*
 
