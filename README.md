@@ -35,6 +35,37 @@ Here is an example of class activation map of the model
 
 <img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/heatmap.png" width="512" height="512">
 
+<details>
+<summary>Executable file guide</summary>
+<br>
+### Developer part 
+  Follow steps bellow to create your own binary model.
+  1) Install pyinstaller into your virtual environment and other requirements using 
+  ```
+  pip install -r requirements.txt
+  ```
+  2) In the folder https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/tree/main/bin_skeleton/
+  there are file model.py with preprocessing and loading segmentation and classification models.
+  That file we will convert into binary file with command.
+  ```
+  pyinstaller -F --hidden-import="sklearn.utils._typedefs" --hidden-import="sklearn.neighbors.typedefs" --hidden-import="sklearn.neighbors.quad_tree" --hidden-import="sklearn.tree._utils"  model.py
+  ```
+  N.B. Here we use some hooks to collect manually all required modules, that weren't included by pyinstaller
+  3) In the folder dist/ of your current directory will be executable binary file of model.
+  
+### User part
+  1) Check options
+  ```
+  ./home/jupyter-n.artemenko/infer/spikelet_pubescence/random_model_exe --help
+  ```
+  2) Run model.
+  ```
+  ./home/jupyter-n.artemenko/infer/spikelet_pubescence/random_model_exe -inp full_path_to_image> -out <path_to_save_txt_file_with_predictions>
+  ```
+  by default prediction will be saved in your current dirrectory int txt file **predictions.txt** (if -out parameter wasn't passed)
+  
+</details>
+
 *Co-authored by @rostepifanov (pretrained segmentation model)*
 
 *N.B. The project was supported by Institute of Cytology and Genetics of SB RAS*
