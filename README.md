@@ -35,9 +35,8 @@ Here is an example of class activation map of the model
 
 <img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/heatmap.png" width="512" height="512">
 
-<details>
-<summary>Executable file guide</summary>
-<br>
+## Executable file guide
+
 ### Developer part 
   Follow steps bellow to create your own binary model.
   1) Install pyinstaller into your virtual environment and other requirements using 
@@ -64,7 +63,6 @@ Here is an example of class activation map of the model
   ```
   by default prediction will be saved in your current dirrectory int txt file **predictions.txt** (if -out parameter wasn't passed)
   
-</details>
 
 *Co-authored by @rostepifanov (pretrained segmentation model)*
 
