@@ -5,6 +5,8 @@ If you have several spikelets on an image you may use, for instance, OpenCV meth
 
 > **countours, hierarchy = cv2.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)**
 
+---
+
 ### Instructions
 
 ---
@@ -34,6 +36,8 @@ N.B. This requires the presence of binary file of segmentation model
 Here is an example of class activation map of the model
 
 <img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/heatmap.png" width="512" height="512">
+
+---
 
 ## Executable file guide
 
