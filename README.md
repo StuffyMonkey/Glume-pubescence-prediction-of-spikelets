@@ -1,5 +1,5 @@
 ### Abstract
-This project was developt for solving problem of glume pubescence of spikelets. The acquired model predicts pubescence feature of spikelets.
+This project was developt for solving problem of prediction the feature of glume pubescence of spikelets of wheat. The acquired classification model predicts pubescence feature of spikelets.
 There is also segmentation model for segmenting spikelets of other objects. Each spikelets must be fed to CNN separately.
 If you have several spikelets on an image you may use, for instance, OpenCV method
 
@@ -29,12 +29,14 @@ using following command: python -inp <full_path_to_iamge> -out <full_path_to_sav
 - Results will be saved into txt file in format <full_path_to_image> <probability_prediction> <br/>
 N.B. This requires the presence of binary file of segmentation model
 
-### Model properties
-**accuracy:** 0.85
+### Best acuqired model properties
+**accuracy:** 0.85  <br/>
+**precision:** 0.8  <br/>
+**roc_auc:** 0.9
 
 Here is an example of class activation map of the model
 
-<img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/heatmap.png" width="512" height="512">
+<img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/heatmap_example.png" width="512" height="512">
 
 ---
 
