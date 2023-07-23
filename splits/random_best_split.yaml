@@ -1,0 +1,3 @@
+train: ['T. aethiopicum', 'T. durum', 'T. timopheevii', 'T. monococcum', 'T. aestivum', 'T. macha', 'T. polonicum', 'T. dicoccum', 'T. boeoticum', 'T. sphaerococcum', 'T. petropavlovskyi', 'T. carthlicum']
+valid: ['T. vavilovii', 'T. spelta', 'T. turgidum']
+test: ['T. yunnanense', 'T. urartu', 'T. compactum', 'T. dicoccoides']
