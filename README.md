@@ -1,15 +1,16 @@
-### Abstract
-This project was developt for solving problem of prediction the feature of glume pubescence of spikelets of wheat. The acquired classification model predicts pubescence feature of spikelets.
+## Abstract
+This project was developed for solving problem of prediction the feature of glume pubescence of spikelets of wheat. The acquired classification model predicts pubescence feature of spikelets.
 There is also segmentation model for segmenting spikelets of other objects. Each spikelets must be fed to CNN separately.
-If you have several spikelets on an image you may use, for instance, OpenCV method
+If you have several spikelets on an image you may use, for instance, OpenCV method:
 
-> **countours, hierarchy = cv2.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)**
+```python
+countours, hierarchy = cv2.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
+```
 
 ---
 
-### Instructions
-
-Images for training and test looked like:
+## Methods preview
+Images for training and test have the same image format depicted below:
 
 <img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/28n4_3_{V-21}_pubesc.jpg" width="480" height="720">
 
@@ -24,7 +25,8 @@ This is an example of mask:
 <img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/28n4_3_{V-21}.jpg" width="240" height="512">
 
 3) Apply classification model for prediction of pubescence (model.py) <br/>
-using following command: python -inp <full_path_to_iamge> -out <full_path_to_save_txt_file>
+using following command:
+```python -inp <full_path_to_iamge> -out <full_path_to_save_txt_file>```
 
 - Results will be saved into txt file in format <full_path_to_image> <probability_prediction> <br/>
 N.B. This requires the presence of binary file of segmentation model
@@ -40,7 +42,9 @@ Here is an example of class activation map of the model
 
 ---
 
-## Executable file guide
+<summary> ## Executable file guide </summary>
+
+<details>
 
 ### Developer part 
   Follow steps bellow to create your own binary model.
@@ -70,6 +74,7 @@ Here is an example of class activation map of the model
   
 ---
 
+</details>
 *Co-authored by @rostepifanov (pretrained segmentation model)*
 
 *N.B. The project was supported by Institute of Cytology and Genetics of SB RAS*
