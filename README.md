@@ -42,10 +42,9 @@ Here is an example of class activation map of the model
 
 ---
 
-<summary> Executable file guide </summary>
-
 <details>
-
+<summary>Executable file guide</summary>
+  
 ### Developer part 
   Follow steps bellow to create your own binary model.
   1) Install pyinstaller into your virtual environment and other requirements using 
