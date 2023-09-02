@@ -49,7 +49,7 @@ Here is an example of class activation map of the model
   * preprocessing.py - python file with class DataPreprocessor and other useful functions to work with raw annotation, images and so on.
   * training_config.py - config file with training information and augmentation. You may use script to make grid-search of params changing dictionaries of params in that file.
   * utils.py - python file with two essential ReadOnly classes and some functions, that idiologically not appropriate for files above.
-<details>
+<\details>
 
 <details>
 <summary>Executable file guide</summary>
