@@ -1,12 +1,12 @@
 ## Abstract
 This project was developed for solving problem of prediction the feature of glume pubescence of spikelets of wheat. The acquired classification model predicts pubescence feature of spikelets.
-There is also segmentation model for segmenting spikelets of other objects. Each spikelets must be fed to CNN separately.
-If you have several spikelets on an image you may use, for instance, OpenCV method:
+There is also segmentation model for segmenting spikelets of other objects. 
+
+Each spikelets must be fed to CNN separately. If you have several spikelets on an image you may use, for instance, OpenCV method:
 
 ```python
 countours, hierarchy = cv2.findContours(thresh, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
 ```
-
 ---
 
 ## Methods preview
@@ -41,6 +41,15 @@ Here is an example of class activation map of the model
 <img src="https://github.com/StuffyMonkey/Glume-pubescence-prediction-of-spikelets/blob/main/Data/heatmap_example.png" width="512" height="512">
 
 ---
+<details>
+<summary>Files information</summary>
+  * config.py - config file with constants, regular expression patterns and other essentials
+  * dataset.py - python file with custom Dataset class. It's essential file and all methods are sharped for the usage of that class with specific annotation.
+  * model.py - python file with single class named Model. It's used to train, evaluate and get predictions of model.
+  * preprocessing.py - python file with class DataPreprocessor and other useful functions to work with raw annotation, images and so on.
+  * training_config.py - config file with training information and augmentation. You may use script to make grid-search of params changing dictionaries of params in that file.
+  * utils.py - python file with two essential ReadOnly classes and some functions, that idiologically not appropriate for files above.
+<details>
 
 <details>
 <summary>Executable file guide</summary>
