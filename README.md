@@ -42,7 +42,7 @@ Here is an example of class activation map of the model
 
 ---
 
-<summary> ## Executable file guide </summary>
+<summary> Executable file guide </summary>
 
 <details>
 
