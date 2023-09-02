@@ -77,5 +77,3 @@ Here is an example of class activation map of the model
 *Co-authored by @rostepifanov (pretrained segmentation model)*
 
 *N.B. The project was supported by Institute of Cytology and Genetics of SB RAS*
-
-*P.S. If you wish to get weights for models, you may write me on email*
