@@ -43,6 +43,7 @@ Here is an example of class activation map of the model
 ---
 <details open>
 <summary>Files information</summary>
+  
   - config.py - config file with constants, regular expression patterns and other essentials
   - dataset.py - python file with custom Dataset class. It's essential file and all methods are sharped for the usage of that class with specific annotation.
   - model.py - python file with single class named Model. It's used to train, evaluate and get predictions of model.
