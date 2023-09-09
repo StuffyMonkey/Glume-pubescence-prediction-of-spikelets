@@ -54,7 +54,10 @@ class Model:
         else:
             self.model.load_state_dict(torch.load(f'{self.save_dir}/{run_name}/last'))
         self.fitted = True
-        
+    
+    def isfitted(self):
+        return self.fitted
+    
     # freeze feature extractor
     def freeze_backbone(self):
         if model_name in [f'efficientnet_b{i}' for i in range(8)]:
@@ -104,7 +107,7 @@ class Model:
         except FileNotFoundError:
             print("Please, check csv file with training loss and training data and path to it")
             
-    def class_activation_map(self, img, target):
+    def class_activation_map(self, img, target=None):
         if not re.search(r'efficientnet', self.model_name):
             raise NotImplementedError('Function can support efficientnet architectures only in that stage of project')
         img = torch.tensor(img)
@@ -137,6 +140,22 @@ class Model:
         plt.imshow(zoom(heatmap, zoom=(scale, scale)), cmap='jet', alpha=0.5)
         plt.savefig(f'{self.experiment_path}/heatmap.png')
         print(f"Target is: {target}", f"Prediction is: {prediction}", sep='\n')
+        
+    # currently, only for batch_size=1.
+    def predict_proba(self, inputs):
+        outputs = []
+        with torch.no_grad():
+            for elem in inputs:
+                # elem = elem.float()
+                elem = np.expand_dims(elem, axis=0)
+                elem = torch.tensor(elem).to(self.device)
+                prediction = self.model(elem).to('cpu').detach().item()
+                outputs.append(prediction)
+        return np.array(outputs)
+    
+    def predict(self, inputs):
+        probs = self.predict_proba(inputs)
+        return np.where(probs > 0.5, 1, 0)
         
     def random_class_activation_map(self, dataset):
         idx = random.randrange(0, len(dataset))
@@ -204,16 +223,15 @@ class Model:
         metric_dict['loss'] = loss
         return metric_dict
     
-    def inference(self, dataset, metrics=['accuracy_score', 'precision_score', 'roc_auc_score']):
+    def inference(self, dataset, sampler=None, metrics=['accuracy_score', 'precision_score', 'roc_auc_score']):
         # form inference dataloader
         generator = DataLoader(dataset=dataset, batch_size=training_params['inference_batch_size'], 
-                                     shuffle=False, num_workers=training_params['num_workers'])
-        
+                                     shuffle=False, num_workers=training_params['num_workers'], sampler=sampler)
         criterion = getattr(torch.nn, training_params['loss'])(reduction='sum')
         res_dict = self.__run_epoch(generator, metrics, criterion=criterion, group='inference')
         for key, value in res_dict.items():
             print(f'{key}: {value}')
-    
+        return res_dict
     
     def fit(self, train_data, valid_data, metrics=['accuracy_score', 'precision_score', 'roc_auc_score'], 
                 selection_criterion='roc_auc_score'):    
