@@ -44,13 +44,17 @@ Here is an example of class activation map of the model
 <details open>
 <summary>Files information</summary>
 
+  - EfficientNet-B1.zip - weigths of the best acquired model
   - UserGuide.ipynb - notebook file with all necessary instructions. You SHOULD'N execute all cells. It's more like a guide to different parts of project.
+  - Additional_Researches.ipynb - notebook file with additional test and tasks completed during project.
   - config.py - config file with constants, regular expression patterns and other essentials
   - dataset.py - python file with custom Dataset class. It's essential file and all methods are sharped for the usage of that class with specific annotation.
   - model.py - python file with single class named Model. It's used to train, evaluate and get predictions of model.
   - preprocessing.py - python file with class DataPreprocessor and other useful functions to work with raw annotation, images and so on.
   - training_config.py - config file with training information and augmentation. You may use script to make grid-search of params changing dictionaries of params in that file.
   - utils.py - python file with two essential ReadOnly classes and some functions, that idiologically not appropriate for files above.
+  - labels.csv - table file with annotation
+  - raw_labels_data - raw txt file table copied from .docx format
  
 </details>
 
